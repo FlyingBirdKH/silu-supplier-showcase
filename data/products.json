@@ -1,0 +1,5 @@
+{
+  "deprecated": true,
+  "message": "单供应商试导 JSON 已退役。请用 data/catalog.json（多甲方：供应商→分类→产品）。",
+  "redirect": "catalog.json"
+}

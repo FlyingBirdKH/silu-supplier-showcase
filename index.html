@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>供应商展示｜按频道甲方</title>
+  <style>
+    :root {
+      --bg: #f6f1e8; --paper: #fffdf8; --ink: #2c2a26; --muted: #6b655c;
+      --line: #e4d8c4; --accent: #3d6b5a; --warn: #9a6b1f; --warn-bg: #fff4d6;
+      --chip: #e8f0ec; --chip-on: #3d6b5a;
+    }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family:"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--ink); line-height:1.55; }
+    header { max-width:1100px; margin:0 auto; padding:36px 20px 8px; }
+    h1 { margin:0 0 8px; font-size:28px; font-weight:650; letter-spacing:.02em; }
+    .sub,.scope { color:var(--muted); font-size:14px; }
+    .scope { margin-top:6px; font-size:13px; }
+    .scope code { background:#efe7da; padding:1px 6px; border-radius:4px; font-size:12px; }
+    .note { max-width:1100px; margin:12px auto 18px; padding:14px 16px; background:var(--warn-bg); border-left:4px solid var(--warn); color:#5c4a22; border-radius:0 10px 10px 0; }
+    .toolbar { max-width:1100px; margin:0 auto 10px; padding:0 20px; display:flex; flex-wrap:wrap; gap:10px; }
+    .toolbar input[type=search] { flex:1 1 220px; min-width:180px; border:1px solid var(--line); background:var(--paper); border-radius:999px; padding:8px 14px; font:inherit; font-size:14px; }
+    .chips { max-width:1100px; margin:0 auto 18px; padding:0 20px; display:flex; flex-wrap:wrap; gap:8px; }
+    .chips button { border:1px solid var(--line); background:var(--paper); color:var(--ink); border-radius:999px; padding:6px 12px; cursor:pointer; font:inherit; font-size:13px; }
+    .chips button.active { background:var(--chip-on); color:#fff; border-color:var(--chip-on); }
+    main { max-width:1100px; margin:0 auto; padding:0 20px 40px; }
+    details.party { background:var(--paper); border:1px solid var(--line); border-radius:16px; margin-bottom:14px; box-shadow:0 8px 24px rgba(60,48,30,.04); overflow:hidden; }
+    details.party > summary { list-style:none; cursor:pointer; padding:16px 18px; display:flex; flex-wrap:wrap; gap:10px; align-items:center; user-select:none; }
+    details.party > summary::-webkit-details-marker { display:none; }
+    details.party > summary::after { content:"▾"; color:var(--muted); font-size:14px; margin-left:auto; }
+    details.party[open] > summary::after { content:"▴"; }
+    .party-title { font-size:18px; font-weight:650; }
+    .party-meta { color:var(--muted); font-size:13px; width:100%; }
+    .badge { display:inline-flex; background:var(--chip); color:var(--accent); padding:3px 10px; border-radius:999px; font-size:12px; font-weight:650; }
+    .badge.empty { background:#f0ebe3; color:var(--muted); }
+    .party-body { padding:0 18px 16px; border-top:1px solid var(--line); }
+    details.supplier { background:#fff; border:1px solid var(--line); border-radius:12px; margin:12px 0; overflow:hidden; }
+    details.supplier > summary { list-style:none; cursor:pointer; padding:12px 14px; display:flex; flex-wrap:wrap; gap:8px; align-items:center; }
+    details.supplier > summary::-webkit-details-marker { display:none; }
+    details.supplier > summary::after { content:"▾"; color:var(--muted); margin-left:auto; font-size:13px; }
+    details.supplier[open] > summary::after { content:"▴"; }
+    .sup-title { font-size:15px; font-weight:650; }
+    .sup-meta { color:var(--muted); font-size:12.5px; }
+    .sup-body { padding:0 14px 14px; border-top:1px solid var(--line); }
+    .cat-block { margin-top:12px; }
+    .cat-head { display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:8px; }
+    .cat-title { font-size:14px; font-weight:600; color:var(--accent); }
+    .empty { margin:12px 0 4px; padding:12px 14px; background:#f3eee4; border-radius:10px; color:var(--muted); font-size:13px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:12px; }
+    .card { background:#fff; border:1px solid var(--line); border-radius:12px; overflow:hidden; display:flex; flex-direction:column; }
+    .thumb { display:block; background:#f3eee4; aspect-ratio:4/3; overflow:hidden; }
+    .thumb img { width:100%; height:100%; object-fit:contain; display:block; }
+    .body { padding:10px 12px 12px; display:flex; flex-direction:column; gap:4px; }
+    .name { font-size:14px; font-weight:650; margin:0; }
+    .meta { font-size:12px; color:var(--muted); }
+    .price { font-size:13px; font-weight:650; display:flex; gap:8px; flex-wrap:wrap; align-items:baseline; }
+    .flag { font-size:11px; font-weight:700; color:var(--warn); background:var(--warn-bg); padding:2px 7px; border-radius:999px; }
+    .code { font-family:ui-monospace,Menlo,Consolas,monospace; font-size:11px; color:#7a746a; }
+    footer { max-width:1100px; margin:0 auto 40px; padding:0 20px; color:var(--muted); font-size:12px; line-height:1.5; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 id="title">供应商展示｜按频道甲方</h1>
+    <div class="sub" id="subtitle">加载中…</div>
+    <div class="scope" id="scope"></div>
+  </header>
+  <div class="note" id="note"></div>
+  <div class="toolbar"><input type="search" id="q" placeholder="搜索甲方／供应商编码／名称…" autocomplete="off" /></div>
+  <nav class="chips" id="chips" aria-label="分类筛选"></nav>
+  <main id="app"></main>
+  <footer id="footer"></footer>
+  <script>
+    const esc = (s) => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+    let DATA = null, activeCat = '全部';
+
+    function allCategories(data) {
+      const set = new Set();
+      for (const p of data.parties) {
+        for (const c of (p.category_l1 || [])) set.add(c);
+        for (const s of (p.suppliers || [])) {
+          for (const c of (s.category_l1 || [])) set.add(c);
+          for (const pr of (s.products || [])) {
+            if (pr.category_l1) set.add(pr.category_l1);
+            if (pr.category_l2) set.add(pr.category_l2);
+          }
+        }
+      }
+      return ['全部', ...Array.from(set)];
+    }
+
+    function partyMatches(p, q, cat) {
+      const hay = `${p.party_code} ${p.name} ${(p.category_l1||[]).join(' ')}`.toLowerCase();
+      const supplierHit = (p.suppliers||[]).some(s => `${s.supplier_code} ${s.name} ${s.category||''}`.toLowerCase().includes(q));
+      if (q && !hay.includes(q) && !supplierHit) return false;
+      if (cat === '全部') return true;
+      if ((p.category_l1||[]).includes(cat)) return true;
+      return (p.suppliers||[]).some(s => (s.category_l1||[]).includes(cat) || (s.products||[]).some(pr => pr.category_l1===cat || pr.category_l2===cat));
+    }
+
+    function filterProducts(s, cat) {
+      const list = s.products || [];
+      if (cat === '全部') return list;
+      return list.filter(pr => pr.category_l1===cat || pr.category_l2===cat || (s.category_l1||[]).includes(cat));
+    }
+
+    function groupByCat(products) {
+      const map = {};
+      for (const p of products) {
+        const key = p.category_l2 || p.category_l1 || '未分类';
+        (map[key] ||= []).push(p);
+      }
+      return map;
+    }
+
+    function renderCard(p) {
+      const code = p.product_code || '未生成（源表未显示）';
+      const outer = p.outer_qty_flag ? `<div class="meta" style="color:var(--warn)">${esc(p.outer_qty_flag)}</div>` : '';
+      const img = p.image_url
+        ? `<a class="thumb" href="${esc(p.image_url)}" target="_blank" rel="noopener"><img src="${esc(p.image_url)}" alt="${esc(p.name)}" loading="lazy" decoding="async" /></a>`
+        : `<div class="thumb"></div>`;
+      return `<article class="card">${img}<div class="body">
+        <h3 class="name">${esc(p.name)}</h3>
+        <div class="meta">长度 ${esc(p.length||'—')}</div>
+        <div class="price"><span>源表单价 ${esc(p.source_unit_price)}</span><span class="flag">非现价</span></div>
+        <div class="meta">${esc(p.pack_label||'')}</div>${outer}
+        <div class="code">product_code: ${esc(code)}</div>
+        <div class="meta">源表行 ${esc(p.source_row??'—')}</div>
+      </div></article>`;
+    }
+
+    function renderSupplier(s, cat) {
+      const products = filterProducts(s, cat);
+      const open = products.length > 0 ? ' open' : '';
+      const city = s.city ? ` · ${esc(s.city)}` : '';
+      const badge = products.length
+        ? `<span class="badge">${products.length} 款</span>`
+        : `<span class="badge empty">暂无产品／待入库</span>`;
+      let body = '';
+      if (!products.length) {
+        body = `<div class="empty">暂无产品／待入库。供应商已在库名录（category_l1＝仿真花）；入库流程不变，本页仅展示层。</div>`;
+      } else {
+        const byCat = groupByCat(products);
+        for (const [c, items] of Object.entries(byCat)) {
+          body += `<div class="cat-block"><div class="cat-head"><div class="cat-title">${esc(c)}</div><span class="badge">${items.length} 款</span></div><div class="grid">${items.map(renderCard).join('')}</div></div>`;
+        }
+      }
+      return `<details class="supplier"${open}>
+        <summary>
+          <div>
+            <div class="sup-title">${esc(s.supplier_code)} · ${esc(s.name)}</div>
+            <div class="sup-meta">${esc(s.status||'')}${city} · ${esc(s.category||'')}</div>
+          </div>${badge}
+        </summary>
+        <div class="sup-body">${body}</div>
+      </details>`;
+    }
+
+    function render() {
+      const q = (document.getElementById('q').value || '').trim().toLowerCase();
+      const root = document.getElementById('app');
+      root.innerHTML = '';
+      let shownParty = 0, shownSup = 0, shownProd = 0;
+      for (const p of DATA.parties) {
+        if (!partyMatches(p, q, activeCat)) continue;
+        shownParty += 1;
+        const suppliers = p.suppliers || [];
+        const prodCount = suppliers.reduce((n,s) => n + filterProducts(s, activeCat).length, 0);
+        shownSup += suppliers.length;
+        shownProd += prodCount;
+        const det = document.createElement('details');
+        det.className = 'party';
+        if (prodCount > 0 || p.party_code === '假花供应商') det.open = true;
+        const badge = prodCount
+          ? `<span class="badge">${suppliers.length} 家 · ${prodCount} 款</span>`
+          : `<span class="badge empty">${p.status || '待入库'}</span>`;
+        let body = '';
+        if (p.note) body += `<div class="empty" style="margin-top:12px">${esc(p.note)}</div>`;
+        if (!suppliers.length) {
+          body += `<div class="empty">暂无产品／待入库。对齐频道甲方帖，库内尚无供应商行或产品资产。</div>`;
+        } else {
+          body += suppliers.map(s => renderSupplier(s, activeCat)).join('');
+        }
+        det.innerHTML = `<summary>
+          <div>
+            <div class="party-title">${esc(p.name)}</div>
+            <div class="party-meta">${esc(p.party_code)} · 频道甲方 · ${(p.category_l1||[]).map(esc).join('／')}</div>
+          </div>${badge}
+        </summary><div class="party-body">${body}</div>`;
+        root.appendChild(det);
+      }
+      document.getElementById('subtitle').textContent =
+        `展示 ${shownParty} 个频道甲方 · 名录供应商 ${shownSup} 家 · 当前筛选 ${shownProd} 款 · 层级：甲方 → 供应商 → 分类 → 产品卡`;
+    }
+
+    function renderChips() {
+      const nav = document.getElementById('chips');
+      nav.innerHTML = '';
+      for (const c of allCategories(DATA)) {
+        const b = document.createElement('button');
+        b.type = 'button'; b.textContent = c;
+        if (c === activeCat) b.classList.add('active');
+        b.addEventListener('click', () => { activeCat = c; renderChips(); render(); });
+        nav.appendChild(b);
+      }
+    }
+
+    async function main() {
+      DATA = await (await fetch('data/catalog.json')).json();
+      document.getElementById('title').textContent = DATA.title;
+      document.getElementById('note').textContent = DATA.note;
+      document.getElementById('scope').innerHTML = `数据范围：<code>${esc(DATA.data_scope)}</code> · 导出 ${esc(DATA.exported_at)}`;
+      document.getElementById('footer').textContent =
+        `CDN ${DATA.cdn_prefix} · 静态烘焙 JSON · 未改表／未开 RLS · Vercel silu-flower-supplier-8 本次无写权，本链为 GitHub Pages 公开镜像`;
+      renderChips(); render();
+      document.getElementById('q').addEventListener('input', render);
+    }
+    main().catch(err => { document.getElementById('subtitle').textContent = '加载失败：' + err.message; });
+  </script>
+</body>
+</html>

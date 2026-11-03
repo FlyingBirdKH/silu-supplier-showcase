@@ -1,0 +1,337 @@
+{
+  "title": "供应商展示｜按频道甲方",
+  "note": "顶层对齐 #供应商数据库 频道甲方帖：假花供应商／灯具供应商／永生花-艺禾／水晶灯-褚灯／水晶灯-露曼施。层级：甲方 →（假花下再列库内供应商）→ 产品分类 → 产品卡。有货出卡；无货「暂无产品／待入库」。价格为原表历史数值（非现价）。只改展示层，未改表／未开 RLS／未动 Canvas。",
+  "data_scope": "频道 5 甲方 + silu-supplier-db 仿真花 8 家名录；有图产品仅 SUP-0029×8。STONE-001 石材未纳入本页。",
+  "cdn_prefix": "https://cdn.siluglobal.com/suppliers/flora/",
+  "exported_at": "2026-11-03 21:55 Asia/Shanghai",
+  "party_count": 5,
+  "supplier_count": 8,
+  "product_count": 8,
+  "parties": [
+    {
+      "party_id": "channel-flora",
+      "party_code": "假花供应商",
+      "name": "假花供应商",
+      "channel_ts": "1793632474.533069",
+      "kind": "channel_party",
+      "category_l1": [
+        "仿真花"
+      ],
+      "status": "进行中",
+      "note": "频道甲方帖。库内仿真花名录 8 家挂其下；仅 SUP-0029 已入库 8 款有图产品。",
+      "suppliers": [
+        {
+          "supplier_id": "7267381b-c70e-4a63-a146-31ddc678293e",
+          "supplier_code": "FLORA",
+          "name": "FLora",
+          "city": null,
+          "status": "已合作",
+          "category": "Faux Florals",
+          "category_l1": [
+            "仿真花"
+          ],
+          "products": [],
+          "product_count": 0
+        },
+        {
+          "supplier_id": "04c3ab76-67f2-492e-af35-b3f590a73aa3",
+          "supplier_code": "SUP-0001",
+          "name": "三迭纪文化(对接 Clara)",
+          "city": null,
+          "status": "候选",
+          "category": "Faux Florals · 花艺整案",
+          "category_l1": [
+            "仿真花"
+          ],
+          "products": [],
+          "product_count": 0
+        },
+        {
+          "supplier_id": "729b1137-1421-4a0d-9b7c-276c2103dac1",
+          "supplier_code": "SUP-0021",
+          "name": "上海简嗳景观设计(沈玮)",
+          "city": "上海",
+          "status": "候选",
+          "category": "绿植景观工程服务",
+          "category_l1": [
+            "仿真花"
+          ],
+          "products": [],
+          "product_count": 0
+        },
+        {
+          "supplier_id": "2c557434-1a7e-44b7-ab01-dadacc65ce3a",
+          "supplier_code": "SUP-0025",
+          "name": "东莞市硕良实业(洪国东)",
+          "city": "广东东莞",
+          "status": "候选",
+          "category": "仿真花现货批发",
+          "category_l1": [
+            "仿真花"
+          ],
+          "products": [],
+          "product_count": 0
+        },
+        {
+          "supplier_id": "112b2289-3ee7-4c94-a903-197f7d5bec9a",
+          "supplier_code": "SUP-0026",
+          "name": "天津雅丽雅仿真花(付建武)",
+          "city": "天津",
+          "status": "候选",
+          "category": "仿真花 · 外贸出口口径",
+          "category_l1": [
+            "仿真花"
+          ],
+          "products": [],
+          "product_count": 0
+        },
+        {
+          "supplier_id": "e7e9a677-eabd-4d39-aa82-f1993458048b",
+          "supplier_code": "SUP-0028",
+          "name": "天津市美莉宸工艺品",
+          "city": "天津",
+          "status": "候选",
+          "category": "大型仿真绿植/工艺品",
+          "category_l1": [
+            "仿真花"
+          ],
+          "products": [],
+          "product_count": 0
+        },
+        {
+          "supplier_id": "a622f0bc-c634-44c4-98e2-b2b65d1dd3a0",
+          "supplier_code": "SUP-0029",
+          "name": "天津鹏程花厂",
+          "city": "天津",
+          "status": "候选",
+          "category": "仿真花厂",
+          "category_l1": [
+            "仿真花"
+          ],
+          "products": [
+            {
+              "product_id": "723dfa77-172f-4f6a-b8b6-aecc39b2fbc2",
+              "name": "狐尾百合",
+              "product_code": null,
+              "category_l1": "仿真花",
+              "category_l2": null,
+              "length": "92CM",
+              "source_unit_price": 2.7,
+              "price_is_historical": true,
+              "inner_quantity": 100,
+              "outer_quantity": 800,
+              "box_spec": "130*50*80",
+              "pack_label": "内盒 100 / 外箱 800 · 箱规 130*50*80",
+              "image_url": "https://cdn.siluglobal.com/suppliers/flora/SUP-0029/row-06-hero-20261103.webp",
+              "source_row": 6,
+              "status": "候选",
+              "outer_qty_flag": null
+            },
+            {
+              "product_id": "0e8ff01d-fc50-421c-882c-2c191e98398f",
+              "name": "3叉紫罗兰",
+              "product_code": null,
+              "category_l1": "仿真花",
+              "category_l2": null,
+              "length": "92CM",
+              "source_unit_price": 4.2,
+              "price_is_historical": true,
+              "inner_quantity": 150,
+              "outer_quantity": 600,
+              "box_spec": "130*50*80",
+              "pack_label": "内盒 150 / 外箱 600 · 箱规 130*50*80",
+              "image_url": "https://cdn.siluglobal.com/suppliers/flora/SUP-0029/row-07-hero-20261103.webp",
+              "source_row": 7,
+              "status": "候选",
+              "outer_qty_flag": null
+            },
+            {
+              "product_id": "24d15dd8-499f-4c42-8ba6-f0ae4bbaaca3",
+              "name": "10头丝印百合",
+              "product_code": null,
+              "category_l1": "仿真花",
+              "category_l2": null,
+              "length": "72CM",
+              "source_unit_price": 2.9,
+              "price_is_historical": true,
+              "inner_quantity": 100,
+              "outer_quantity": 800,
+              "box_spec": "130*50*80",
+              "pack_label": "内盒 100 / 外箱 800 · 箱规 130*50*80",
+              "image_url": "https://cdn.siluglobal.com/suppliers/flora/SUP-0029/row-08-hero-20261103.webp",
+              "source_row": 8,
+              "status": "候选",
+              "outer_qty_flag": null
+            },
+            {
+              "product_id": "d7ecb17d-21b1-463e-88f8-edc793fb28ba",
+              "name": "单支飞雁",
+              "product_code": null,
+              "category_l1": "仿真花",
+              "category_l2": null,
+              "length": "92CM",
+              "source_unit_price": 3,
+              "price_is_historical": true,
+              "inner_quantity": 125,
+              "outer_quantity": 500,
+              "box_spec": "130*50*80",
+              "pack_label": "内盒 125 / 外箱 500 · 箱规 130*50*80",
+              "image_url": "https://cdn.siluglobal.com/suppliers/flora/SUP-0029/row-09-hero-20261103.webp",
+              "source_row": 9,
+              "status": "候选",
+              "outer_qty_flag": null
+            },
+            {
+              "product_id": "e92d2fda-fe8d-4f14-919a-0708e58df713",
+              "name": "3头皇妃玫",
+              "product_code": null,
+              "category_l1": "仿真花",
+              "category_l2": null,
+              "length": "66CM",
+              "source_unit_price": 3,
+              "price_is_historical": true,
+              "inner_quantity": 200,
+              "outer_quantity": 800,
+              "box_spec": "130*50*80",
+              "pack_label": "内盒 200 / 外箱 800 · 箱规 130*50*80",
+              "image_url": "https://cdn.siluglobal.com/suppliers/flora/SUP-0029/row-10-hero-20261103.webp",
+              "source_row": 10,
+              "status": "候选",
+              "outer_qty_flag": null
+            },
+            {
+              "product_id": "012e4779-6672-4597-949f-2e70c9652606",
+              "name": "千层玫瑰",
+              "product_code": null,
+              "category_l1": "仿真花",
+              "category_l2": null,
+              "length": "65CM",
+              "source_unit_price": 3.7,
+              "price_is_historical": true,
+              "inner_quantity": 200,
+              "outer_quantity": 800,
+              "box_spec": "130*50*80",
+              "pack_label": "内盒 200 / 外箱 800 · 箱规 130*50*80",
+              "image_url": "https://cdn.siluglobal.com/suppliers/flora/SUP-0029/row-11-hero-20261103.webp",
+              "source_row": 11,
+              "status": "候选",
+              "outer_qty_flag": null
+            },
+            {
+              "product_id": "5da78857-4bab-4f31-89b1-a0a06c9f2848",
+              "name": "绒花",
+              "product_code": null,
+              "category_l1": "仿真花",
+              "category_l2": null,
+              "length": "90CM",
+              "source_unit_price": 3.8,
+              "price_is_historical": true,
+              "inner_quantity": 150,
+              "outer_quantity": 600,
+              "box_spec": "130*50*80",
+              "pack_label": "内盒 150 / 外箱 600 · 箱规 130*50*80",
+              "image_url": "https://cdn.siluglobal.com/suppliers/flora/SUP-0029/row-12-hero-20261103.webp",
+              "source_row": 12,
+              "status": "候选",
+              "outer_qty_flag": null
+            },
+            {
+              "product_id": "7e5f8a79-35f5-40c0-b895-737509ca4d54",
+              "name": "海棠",
+              "product_code": null,
+              "category_l1": "仿真花",
+              "category_l2": null,
+              "length": "65CM",
+              "source_unit_price": 2.8,
+              "price_is_historical": true,
+              "inner_quantity": 150,
+              "outer_quantity": 12000,
+              "box_spec": "130*50*80",
+              "pack_label": "内盒 150 / 外箱 12000 · 箱规 130*50*80",
+              "image_url": "https://cdn.siluglobal.com/suppliers/flora/SUP-0029/row-13-hero-20261103.webp",
+              "source_row": 13,
+              "status": "候选",
+              "outer_qty_flag": "疑点-原表12000待核"
+            }
+          ],
+          "product_count": 8
+        },
+        {
+          "supplier_id": "0f3c0e9d-a4b9-4652-9566-2c8b10ec0ace",
+          "supplier_code": "SUP-0030",
+          "name": "盛世翔公司",
+          "city": null,
+          "status": "候选",
+          "category": "仿真花 · 新品",
+          "category_l1": [
+            "仿真花"
+          ],
+          "products": [],
+          "product_count": 0
+        }
+      ],
+      "supplier_count": 8,
+      "product_count": 8
+    },
+    {
+      "party_id": "channel-lamp",
+      "party_code": "灯具供应商",
+      "name": "灯具供应商",
+      "channel_ts": "1793694235.727059",
+      "kind": "channel_party",
+      "category_l1": [
+        "灯具"
+      ],
+      "status": "待入库",
+      "note": "频道甲方帖。silu-supplier-db 尚无灯具 category_l1 供应商行；本页占位。",
+      "suppliers": [],
+      "supplier_count": 0,
+      "product_count": 0
+    },
+    {
+      "party_id": "channel-yihe",
+      "party_code": "永生花-艺禾",
+      "name": "永生花供应商-艺禾公司",
+      "channel_ts": "1793710065.075029",
+      "kind": "channel_party",
+      "category_l1": [
+        "永生花"
+      ],
+      "status": "整理中",
+      "note": "频道甲方帖（由假花-A 改名）。Dot 在途整理入库；库内尚无独立供应商行／产品。",
+      "suppliers": [],
+      "supplier_count": 0,
+      "product_count": 0
+    },
+    {
+      "party_id": "channel-chudeng",
+      "party_code": "水晶灯-褚灯",
+      "name": "水晶灯供应商--褚灯",
+      "channel_ts": "1793712146.930849",
+      "kind": "channel_party",
+      "category_l1": [
+        "水晶灯"
+      ],
+      "status": "待入库",
+      "note": "频道甲方帖。库内尚无对应供应商行／产品；本页占位。",
+      "suppliers": [],
+      "supplier_count": 0,
+      "product_count": 0
+    },
+    {
+      "party_id": "channel-lumanshi",
+      "party_code": "水晶灯-露曼施",
+      "name": "水晶灯供应商--露曼施",
+      "channel_ts": "1793712878.221019",
+      "kind": "channel_party",
+      "category_l1": [
+        "水晶灯"
+      ],
+      "status": "待入库",
+      "note": "频道甲方帖。库内尚无对应供应商行／产品；本页占位。",
+      "suppliers": [],
+      "supplier_count": 0,
+      "product_count": 0
+    }
+  ]
+}
